@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-image: url('Certificate.png'); /* Replace with your image URL or path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        div {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 12px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            div {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>شهادة مشاركة</h1>
+        <p><h2><span id="submittedName"></span><h2></p>
+        <p><h3> تقديراً لمشاركتكم الإيجابية في التوقيع على وثيقة "التسامح سعادة" للالتزام بقيم التسامح والتعايش، والتي أطلقتها محاكم رأس الخيمة بمناسبة اليوم الدولي للتسامح للعام 2023م، فقد تقرر منحكم هذه الشهادة.
+</span><h3></p>
+      
+    </div>
+
+    <script>
+        // Extract values from the URL parameters
+        var params = new URLSearchParams(window.location.search);
+        var name = params.get("name");
+        var email = params.get("email");
+
+        // Display the values on the page
+        document.getElementById("submittedName").innerText = name;
+        document.getElementById("submittedEmail").innerText = email;
+    </script>
+</body>
+</html>
